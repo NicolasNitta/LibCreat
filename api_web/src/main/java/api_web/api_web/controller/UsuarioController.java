@@ -9,11 +9,6 @@ import java.util.ArrayList;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import api_web.api_web.model.Usuario;
-
-import java.util.ArrayList;
-
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PostMapping;
 
@@ -25,10 +20,10 @@ public class UsuarioController {
     ArrayList<Usuario> listaUsuario = new ArrayList<>();
 
     public UsuarioController() {
-        listaUsuario.add(
-                new Usuario("Mickey", "123@gmail.com", "Samu", "123", 123, "123"));
-        listaUsuario.add(
-                new Usuario("CleitinDoPneu", "job@gmail.com", "Nicolas", "Job", 123, "Job"));
+        //listaUsuario.add(
+         //       new Usuario("Mickey", "123@gmail.com", "Samu", "123", 123, "123"));
+       // listaUsuario.add(
+          //      new Usuario("CleitinDoPneu", "job@gmail.com", "Nicolas", "Job", 123, "Job"));
 
     }
 
