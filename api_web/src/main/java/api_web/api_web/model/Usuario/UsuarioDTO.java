@@ -1,12 +1,13 @@
-package api_web.api_web.model;
+package api_web.api_web.model.Usuario;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
-@AllArgsConstructor
-public class Usuario {
+@Getter
+@Setter
 
+public class UsuarioDTO {
+    
     private String nickname;
     private String email;
     private String nome;

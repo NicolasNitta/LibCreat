@@ -1,8 +1,8 @@
-package api_web.api_web.controller;
+package api_web.api_web.controller.Usuario;
 
 import org.springframework.web.bind.annotation.RestController;
 
-import api_web.api_web.model.Usuario;
+import api_web.api_web.model.Usuario.Usuario;
 
 import java.util.ArrayList;
 
@@ -13,14 +13,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 public class UsuarioController {
 
     ArrayList<Usuario> listaUsuario = new ArrayList<>();
-
-    public UsuarioController() {
-        listaUsuario.add(
-                new Usuario("Mickey", "123@gmail.com", "Samu", "123", 123, "123"));
-        listaUsuario.add(
-                new Usuario("CleitinDoPneu", "job@gmail.com", "Nicolas", "Job", 123, "Job"));
-
-    }
 
     @GetMapping("/Usuario/{nickname}")
     public Usuario getUsuarioByNick(@PathVariable("nickname") String nickname) {
