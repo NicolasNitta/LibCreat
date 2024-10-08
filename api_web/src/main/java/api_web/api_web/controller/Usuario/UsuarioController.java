@@ -2,29 +2,34 @@ package api_web.api_web.controller.Usuario;
 
 import org.springframework.web.bind.annotation.RestController;
 
-import api_web.api_web.model.Usuario.Usuario;
+import api_web.api_web.model.Usuario.UsuarioDTO;
+import lombok.RequiredArgsConstructor;
 
-import java.util.ArrayList;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+
 
 @RestController
+@RequestMapping("/Usuario")
+@RequiredArgsConstructor
 public class UsuarioController {
 
-    ArrayList<Usuario> listaUsuario = new ArrayList<>();
+    private final UsuarioService usuarioService;
 
-    @GetMapping("/Usuario/{nickname}")
-    public Usuario getUsuarioByNick(@PathVariable("nickname") String nickname) {
-
-    for (Usuario newUser : listaUsuario) {
-        if(newUser.getNickname().equals(nickname)){
-            return newUser;
-            }
-        }
-    return null;
-
-
+    @PostMapping
+    public void cadastrarUsuario(@RequestBody UsuarioDTO userDTO) {
+            usuarioService.criarUsuario(userDTO);
     }
 
+    @GetMapping
+    public List<UsuarioDTO> BuscarUsuarios() {
+        return usuarioService.buscarTodosUsuarios();
+    }
+    
+    
 }
