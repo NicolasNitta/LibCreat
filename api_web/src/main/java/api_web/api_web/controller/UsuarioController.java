@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 @RestController
 public class UsuarioController {
 
+    
+/* 
     ArrayList<Usuario> listaUsuario = new ArrayList<>();
 
     public UsuarioController() {
@@ -80,5 +82,5 @@ public class UsuarioController {
         return false;
     }
     
-
+*/
 }
