@@ -12,7 +12,7 @@ public class UsuarioDTO {
     private String email;
     private String nome;
     private String descricao;
-    private long seguidores;
+    private int seguidores;
     private String senha;
 
 

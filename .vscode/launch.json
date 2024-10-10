@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ApiWebApplication<api_web>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "api_web.api_web.ApiWebApplication",
+            "projectName": "api_web",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

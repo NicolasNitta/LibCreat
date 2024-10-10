@@ -15,18 +15,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 
 @RestController
-@RequestMapping("/Usuario")
+@RequestMapping("/usuario")
 @RequiredArgsConstructor
 public class UsuarioController {
 
     private final UsuarioService usuarioService;
 
-    @PostMapping
+    @PostMapping ("post")
     public void cadastrarUsuario(@RequestBody UsuarioDTO userDTO) {
             usuarioService.criarUsuario(userDTO);
     }
 
-    @GetMapping
+    @GetMapping ("get")
     public List<UsuarioDTO> BuscarUsuarios() {
         return usuarioService.buscarTodosUsuarios();
     }

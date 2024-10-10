@@ -7,9 +7,11 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "Usuario")
 @Entity
 public class Usuario {
@@ -25,7 +27,7 @@ public class Usuario {
     
     private String descricao;
     
-    private long seguidores;
+    private int seguidores;
     
     private String senha;
 
