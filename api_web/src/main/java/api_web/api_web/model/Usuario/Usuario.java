@@ -17,7 +17,7 @@ import lombok.NoArgsConstructor;
 public class Usuario {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long idUsuario;
 
     private String nickname;
     
