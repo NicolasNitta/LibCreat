@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 
 @RestController
@@ -21,15 +24,21 @@ public class UsuarioController {
 
     private final UsuarioService usuarioService;
 
-    @PostMapping ("post")
+    @PostMapping
     public void cadastrarUsuario(@RequestBody UsuarioDTO userDTO) {
             usuarioService.criarUsuario(userDTO);
     }
 
-    @GetMapping ("get")
+    @GetMapping
     public List<UsuarioDTO> BuscarUsuarios() {
         return usuarioService.buscarTodosUsuarios();
     }
+
+    @GetMapping("/{id}")
+    public UsuarioDTO BuscandoPorId(@PathVariable Long id) {
+        return usuarioService.BuscandoPorId(id);
+    }
+    
     
     
 }

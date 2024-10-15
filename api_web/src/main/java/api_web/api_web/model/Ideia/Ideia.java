@@ -2,15 +2,14 @@ package api_web.api_web.model.Ideia;
 
 import api_web.api_web.model.Mensagem.Mensagem;
 import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
-@EqualsAndHashCode(callSuper = true)
+@Getter
+@Setter
 
 @Entity
-@Table(name = "Ideia")
+
 
 public class Ideia extends Mensagem{
     

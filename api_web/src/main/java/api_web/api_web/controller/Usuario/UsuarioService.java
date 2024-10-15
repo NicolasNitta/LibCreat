@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import api_web.api_web.model.Usuario.Usuario;
 import api_web.api_web.model.Usuario.UsuarioDTO;
 import api_web.api_web.repository.UsuarioRepository;
+import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 
 @Service
@@ -28,6 +29,11 @@ public class UsuarioService {
     public List<UsuarioDTO> buscarTodosUsuarios(){
         return usuarioRepository.findAll().stream().map(u -> modelMapper.map(u, UsuarioDTO.class)).collect(Collectors.toList());
 
+    }
+
+    public UsuarioDTO BuscandoPorId(Long id) {
+        Usuario usuario = usuarioRepository.findById(id).orElseThrow(() -> new EntityNotFoundException());
+        return modelMapper.map(usuario, UsuarioDTO.class);
     }
 }
 
