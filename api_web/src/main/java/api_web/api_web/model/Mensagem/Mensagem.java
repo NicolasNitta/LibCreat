@@ -2,13 +2,12 @@ package api_web.api_web.model.Mensagem;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+
 import jakarta.persistence.MappedSuperclass;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,7 +15,7 @@ import lombok.Setter;
 @Data
 @Getter
 @Setter
-@EqualsAndHashCode (of = {"idMensagem"})
+
 public abstract class Mensagem {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
