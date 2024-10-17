@@ -1,5 +1,5 @@
 package api_web.api_web.model.Desenho;
-
+/* 
 import api_web.api_web.model.Ideia.Ideia;
 import api_web.api_web.model.Mensagem.MensagemDTO;
 import lombok.Getter;
@@ -14,3 +14,4 @@ public class DesenhoDTO extends MensagemDTO{
     private Ideia ideia;
     
 }
+*/

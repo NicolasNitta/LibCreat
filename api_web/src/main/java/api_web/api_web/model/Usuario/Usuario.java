@@ -12,12 +12,13 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "Usuario")
+@Table(name = "usuario")
+
 @Entity
 public class Usuario {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idUsuario;
+    private Long id_Usuario;
 
     private String nickname;
     
@@ -27,7 +28,7 @@ public class Usuario {
     
     private String descricao;
     
-    private int seguidores;
+    private Long seguidores;
     
     private String senha;
 

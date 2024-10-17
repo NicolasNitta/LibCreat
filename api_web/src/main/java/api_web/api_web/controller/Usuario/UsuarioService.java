@@ -18,6 +18,7 @@ import lombok.RequiredArgsConstructor;
 public class UsuarioService {
     
     private final UsuarioRepository usuarioRepository;
+    
     private final ModelMapper modelMapper;
 
     public UsuarioDTO criarUsuario(UsuarioDTO userDTO){
@@ -34,6 +35,18 @@ public class UsuarioService {
     public UsuarioDTO BuscandoPorId(Long id) {
         Usuario usuario = usuarioRepository.findById(id).orElseThrow(() -> new EntityNotFoundException());
         return modelMapper.map(usuario, UsuarioDTO.class);
+    }
+
+    public UsuarioDTO atualizaUsuario(Long id, UsuarioDTO usuarioDTO){
+        Usuario usuario = modelMapper.map(usuarioDTO, Usuario.class);
+        usuario.setId_Usuario(id);
+        usuarioRepository.save(usuario);
+        return modelMapper.map(usuario, UsuarioDTO.class);
+    }
+
+    public void deletaUsuario(Long id) {
+
+        usuarioRepository.deleteById(id);
     }
 }
 
