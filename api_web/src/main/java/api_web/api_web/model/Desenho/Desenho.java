@@ -1,5 +1,5 @@
 package api_web.api_web.model.Desenho;
-/*
+
 import org.hibernate.annotations.ManyToAny;
 
 import api_web.api_web.model.Ideia.Ideia;
@@ -25,4 +25,4 @@ public class Desenho extends Mensagem{
     @ManyToOne
     private Ideia ideia;
 
-}*/
+}
