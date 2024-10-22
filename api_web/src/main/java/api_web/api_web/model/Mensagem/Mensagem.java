@@ -1,7 +1,7 @@
 package api_web.api_web.model.Mensagem;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+import java.time.LocalDate;
+
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -22,6 +22,6 @@ public abstract class Mensagem {
     private Long idMensagem;
     private String titulo;
     private Long curtidas;
-    private String dateTime = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/YYYY HH:mm"));
+    private LocalDate date = LocalDate.now();
     private String destinatario; //Teoricamente, esse é o nickname de outro usuário.
 }
