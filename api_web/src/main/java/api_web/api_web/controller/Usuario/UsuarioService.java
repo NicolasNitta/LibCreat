@@ -30,7 +30,7 @@ public class UsuarioService {
     public List<UsuarioDTO> buscarTodosUsuarios(){
         return usuarioRepository.findAll().stream().map(u -> modelMapper.map(u, UsuarioDTO.class)).collect(Collectors.toList());
 
-    }
+    }   
 
     public UsuarioDTO BuscandoPorId(Long id) {
         Usuario usuario = usuarioRepository.findById(id).orElseThrow(() -> new EntityNotFoundException());

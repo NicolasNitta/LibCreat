@@ -1,9 +1,7 @@
 package api_web.api_web.repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-
 import api_web.api_web.model.Desenho.Desenho;
 
-public interface DesenhoRepository <E extends MensagemRepository> extends JpaRepository<Desenho, Long>{
+public interface DesenhoRepository extends MensagemRepository<Desenho>{
     
 }

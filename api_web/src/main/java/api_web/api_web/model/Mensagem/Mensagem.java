@@ -22,6 +22,6 @@ public abstract class Mensagem {
     private Long idMensagem;
     private String titulo;
     private Long curtidas;
-    private LocalDate date = LocalDate.now();
+    private LocalDate dataHora = LocalDate.now();
     private String destinatario; //Teoricamente, esse é o nickname de outro usuário.
 }
