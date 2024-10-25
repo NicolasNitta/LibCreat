@@ -18,10 +18,12 @@ import lombok.Setter;
 
 public abstract class Mensagem {
 
+
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idMensagem;
     private String titulo;
     private Long curtidas;
     private LocalDate dataHora = LocalDate.now();
     private String destinatario; //Teoricamente, esse é o nickname de outro usuário.
+
 }
