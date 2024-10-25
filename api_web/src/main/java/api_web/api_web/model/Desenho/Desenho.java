@@ -20,8 +20,8 @@ public class Desenho extends Mensagem{
     
     private String tag;
 
-    @ManyToOne
-    @JoinColumn(name = "id_ideia", nullable = false)
-    private Ideia ideia;
+  //  @ManyToOne
+  //  @JoinColumn(name = "id_ideia", nullable = false)
+  //  private Ideia ideia;
 
 }

@@ -16,5 +16,5 @@ public class IdeiaDTO extends MensagemDTO{
     private String texto;
 
     // @OneToMany (mappedBy = "ideia", cascade = CascadeType.ALL)
-    private List<Desenho> desenho;
+  //  private List<Desenho> desenho;
 }

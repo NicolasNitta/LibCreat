@@ -21,7 +21,7 @@ public class Ideia extends Mensagem{
   
     private String texto;
 
-    @OneToMany (mappedBy = "ideia", cascade = CascadeType.ALL)
-    private List<Desenho> desenhos;
+  //  @OneToMany (mappedBy = "ideia", cascade = CascadeType.ALL)
+  //  private List<Desenho> desenhos;
 
 }
