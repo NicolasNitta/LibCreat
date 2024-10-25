@@ -15,7 +15,7 @@ import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/Imagem")
+@RequestMapping("/imagem")
 
 public class ImagemController {
     

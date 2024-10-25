@@ -3,7 +3,4 @@ spring:
         driver-class-name: com.mysql.cj.jdbc.Driver
         url: jdbc:mysql://localhost:3306/libcreat_db?createDatabaseIfNotExist=true
         username: root
-        password: ifsp
-
-jpa:
-    show-sql: true
+        password: Janete10!

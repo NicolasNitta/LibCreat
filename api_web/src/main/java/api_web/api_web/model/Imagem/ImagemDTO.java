@@ -8,6 +8,6 @@ import lombok.Setter;
 @Setter
 public class ImagemDTO extends MensagemDTO{
     
-    private String url;
+    private String texto_url;
 
 }
