@@ -1,25 +1,32 @@
-package api_web.api_web.model;
+package api_web.api_web.model.Usuario;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
+import jakarta.persistence.Table;
 import lombok.Data;
 
 @Data
-@AllArgsConstructor
+@Table(name = "usuario")
+
 @Entity
 public class Usuario {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    
+    private Long id_Usuario;
+
     private String nickname;
+    
     private String email;
+    
     private String nome;
+    
     private String descricao;
-    private long seguidores;
+    
+    private Long seguidores;
+    
     private String senha;
 
 
