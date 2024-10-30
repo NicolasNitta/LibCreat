@@ -19,6 +19,5 @@ public class Ideia extends Mensagem{
   
   private String texto;
 
-  private List<Desenho> desenhos;
 
 }

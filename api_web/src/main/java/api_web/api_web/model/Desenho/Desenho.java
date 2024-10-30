@@ -18,6 +18,5 @@ import lombok.Setter;
 public class Desenho extends Mensagem{
     
     private String tag;
-    private Ideia ideia;
 
 }

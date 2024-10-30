@@ -12,6 +12,5 @@ public class DesenhoDTO extends MensagemDTO{
 
     private String tag;
     
-    private Ideia ideia;
     
 }
