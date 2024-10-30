@@ -12,7 +12,6 @@ public class DesenhoDTO extends MensagemDTO{
 
     private String tag;
     
-  //  @ManyToOne
- //   private Ideia ideia;
+    private Ideia ideia;
     
 }

@@ -11,10 +11,12 @@ import api_web.api_web.model.Ideia.Ideia;
 import api_web.api_web.model.Ideia.IdeiaDTO;
 import api_web.api_web.repository.IdeiaRepository;
 import jakarta.persistence.EntityNotFoundException;
+import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
+@Data
 
 public class IdeiaService {
 

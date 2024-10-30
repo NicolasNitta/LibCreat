@@ -19,9 +19,10 @@ public class DesenhoService {
     private final DesenhoRepository desenhoRepository;
     private final ModelMapper modelMapper;
 
-    public DesenhoDTO criarDesenho(DesenhoDTO dto) {
+    public DesenhoDTO criarDesenho(DesenhoDTO dto, Long id_Ideia) {
         Desenho desenho = modelMapper.map(dto, Desenho.class);
         desenhoRepository.save(desenho);
+        
         return modelMapper.map(desenho, DesenhoDTO.class);
 
     }
