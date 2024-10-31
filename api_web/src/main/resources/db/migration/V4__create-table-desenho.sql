@@ -1,11 +1,12 @@
 CREATE TABLE IF NOT EXISTS Desenho(
     
-    id_Mensagem BIGINT NOT NULL auto_increment PRIMARY KEY,
-    título VARCHAR(200),
+    id_mensagem BIGINT NOT NULL auto_increment PRIMARY KEY,
+    titulo VARCHAR(200),
     curtidas BIGINT not NULL,
-    dataHora DATE,
+    data_hora DATE,
     destinatario VARCHAR(250),
-    id_ideia BIGINT,
-    FOREIGN KEY (id_ideia) REFERENCES Ideia(id_ideia)
+    tag VARCHAR(250),
+    ideia_id BIGINT,
 
+    FOREIGN KEY (ideia_id) REFERENCES Ideia(id_mensagem) ON DELETE CASCADE
 )

@@ -10,6 +10,7 @@ import lombok.Setter;
 
 public abstract class MensagemDTO {
 
+    private Long idMensagem;
     private String titulo;
     private Long curtidas;
     private LocalDate dataHora = LocalDate.now();
