@@ -23,8 +23,8 @@ public class DesenhoController {
     private final DesenhoService desenhoService;
 
     @PostMapping
-    public DesenhoDTO criarDesenho(@RequestBody DesenhoDTO desenhoDTO, @PathVariable Long id_Ideia) {
-        return desenhoService.criarDesenho(desenhoDTO, id_Ideia);
+    public DesenhoDTO criarDesenho(@RequestBody DesenhoDTO desenhoDTO) {
+        return desenhoService.criarDesenho(desenhoDTO);
     }
     
     @GetMapping

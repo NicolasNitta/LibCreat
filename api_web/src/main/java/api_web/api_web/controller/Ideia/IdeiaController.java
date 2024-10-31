@@ -42,8 +42,8 @@ public class IdeiaController {
     }
 
     @PutMapping("/{id}")
-    public void atualizarIdeia(@RequestBody IdeiaDTO ideiaDTO, @PathVariable Long id){        
-        ideiaService.atualizarIdeia(ideiaDTO, id);
+    public IdeiaDTO atualizarIdeia(@RequestBody IdeiaDTO ideiaDTO, @PathVariable Long id){        
+        return ideiaService.atualizarIdeia(ideiaDTO, id);
     }
 
     @DeleteMapping("/{id}")

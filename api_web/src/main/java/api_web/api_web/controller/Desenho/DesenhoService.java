@@ -1,7 +1,6 @@
 package api_web.api_web.controller.Desenho;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
@@ -9,9 +8,7 @@ import org.springframework.stereotype.Service;
 
 import api_web.api_web.model.Desenho.Desenho;
 import api_web.api_web.model.Desenho.DesenhoDTO;
-import api_web.api_web.model.Ideia.Ideia;
 import api_web.api_web.repository.DesenhoRepository;
-import api_web.api_web.repository.IdeiaRepository;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 
@@ -21,20 +18,11 @@ public class DesenhoService {
 
     private final DesenhoRepository desenhoRepository;
     private final ModelMapper modelMapper;
-  //  private IdeiaRepository ideiaRepository;
 
-    public DesenhoDTO criarDesenho(DesenhoDTO dto, Long id_Ideia) {
+    public DesenhoDTO criarDesenho(DesenhoDTO dto) {
         Desenho desenho = modelMapper.map(dto, Desenho.class);
-
-    /*   Optional<Ideia> ideiaOpcional = ideiaRepository.findById(id_Ideia);
-
-        if (ideiaOpcional.isPresent()) {
-            Ideia ideia = ideiaOpcional.get();
-            desenho.setIdeia(ideia);
-            desenhoRepository.save(desenho);*/  
+        desenhoRepository.save(desenho);
             return modelMapper.map(desenho, DesenhoDTO.class);
-      //  }
-     //   throw new RuntimeException("Ideia não encontrada");
 
     }
 

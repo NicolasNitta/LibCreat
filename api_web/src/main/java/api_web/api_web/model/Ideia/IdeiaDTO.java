@@ -1,8 +1,5 @@
 package api_web.api_web.model.Ideia;
 
-import java.util.List;
-
-import api_web.api_web.model.Desenho.Desenho;
 import api_web.api_web.model.Mensagem.MensagemDTO;
 import lombok.Getter;
 import lombok.Setter;
