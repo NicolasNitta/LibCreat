@@ -6,4 +6,6 @@ Integrantes: NICOLAS HAYATO NITTA   BP3037681
 
 https://docs.google.com/spreadsheets/d/1o7UrhRgWVcnN5Q309DOEhTjguQWoeSA8eSpUX6Gs0RI/edit?usp=sharing
 
-[thunder-collection_LibCreat.json](https://github.com/user-attachments/files/17600315/thunder-collection_LibCreat.json)
+https://github.com/user-attachments/assets/d9165e8e-3602-4cb9-a98a-1c33e9387bcb
+
+
