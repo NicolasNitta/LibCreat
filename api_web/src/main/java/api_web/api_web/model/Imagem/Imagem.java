@@ -14,6 +14,6 @@ import lombok.Setter;
 public class Imagem extends Mensagem{
     
     private String texto_url;
-
+    private Long ideia_id;
 }
 

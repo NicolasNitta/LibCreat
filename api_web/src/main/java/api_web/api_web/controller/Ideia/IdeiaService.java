@@ -27,15 +27,13 @@ public class IdeiaService {
     public IdeiaDTO criarIdeia(IdeiaDTO ideiaDTO) {
        
         Ideia ideia = modelMapper.map(ideiaDTO, Ideia.class);
-        // ideia.getDesenhos().stream().map(i -> i.setDesenho(ideia));
         ideiaRepository.save(ideia);
         return modelMapper.map(ideia, IdeiaDTO.class); 
     }
 
     public List<IdeiaDTO> buscarIdeias() {
         return ideiaRepository.findAll().stream().map(i -> modelMapper.map(i, IdeiaDTO.class)).collect(Collectors.toList());
-      /* List<Ideia> ideiaList = (List<Ideia>) ideiaRepository.findAll();
-        return ideiaList.stream().map(i -> modelMapper.map(i, IdeiaDTO.class)).collect(Collectors.toList());*/
+      
     }
 
     public IdeiaDTO buscarIdeiaID(Long id) {

@@ -10,5 +10,5 @@ import lombok.Setter;
 public class IdeiaDTO extends MensagemDTO{
 
     private String texto;
-
+    private Long usuario_id;
 }
