@@ -9,5 +9,5 @@ import lombok.Setter;
 public class ImagemDTO extends MensagemDTO{
     
     private String texto_url;
-
+    private Long ideia_id;
 }

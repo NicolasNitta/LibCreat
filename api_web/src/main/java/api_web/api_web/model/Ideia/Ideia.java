@@ -15,6 +15,6 @@ import lombok.Setter;
 public class Ideia extends Mensagem{
   
   private String texto;
-
+  private Long usuario_id;
 
 }
